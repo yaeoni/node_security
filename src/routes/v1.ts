@@ -1,6 +1,5 @@
 import express = require("express");
-import jwt from "jsonwebtoken";
-import { Request, Response, NextFunction } from "express";
+import { Request, Response } from "express";
 
 import verifyToken from "../middleware/verifyToken";
 import getToken from "../controller/getToken";
