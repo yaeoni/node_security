@@ -1,5 +1,6 @@
 import express = require("express");
 import { Request, Response, NextFunction } from "express";
+import router from "./routes/v1";
 
 import logger from "morgan";
 
@@ -7,7 +8,7 @@ const app = express();
 
 app.use(logger("dev"));
 app.use(express.json());
-
+app.use(router);
 // error handler
 app.use(function (err: any, req: Request, res: Response, next: NextFunction) {
   // set locals, only providing error in development
