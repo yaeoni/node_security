@@ -5,6 +5,7 @@ import config from "../config/config";
 
 export default (req: Request, res: Response, next: NextFunction) => {
   try {
+    console.log(req.headers.authorization);
     req["decoded"] = jwt.verify(req.headers.authorization, config.jwtSecret);
     return next();
   } catch (err) {
