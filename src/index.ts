@@ -1,6 +1,6 @@
 import express = require("express");
 import { Request, Response, NextFunction } from "express";
-import router from "./routes/v1";
+import router from "./routes";
 
 import logger from "morgan";
 

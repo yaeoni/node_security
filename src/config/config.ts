@@ -8,4 +8,7 @@ if (envFound.error) {
 
 export default {
   jwtSecret: process.env.JWT_SECRET,
+  redisHost: process.env.REDIS_HOST,
+  redisPort: process.env.REDIS_PORT,
+  redisPwd: process.env.REDIS_PASSWORD,
 };
